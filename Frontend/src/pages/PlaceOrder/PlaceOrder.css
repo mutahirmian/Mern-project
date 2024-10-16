@@ -1,0 +1,122 @@
+.place-order {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center align items */
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: 30%; /* Limit the max-width for larger screens */
+}
+
+.place-order-left .title {
+    font-size: 30px; /* Font size for title */
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+
+.place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right {
+    width: 100%;
+    max-width: 40%; /* Limit the max-width for larger screens */
+}
+
+.place-order .cart-total {
+    width: 100%; /* Full width for total section */
+}
+
+.place-order .cart-total button {
+    margin-top: 30px;
+    background-color: tomato; /* Primary color for the button */
+    color: white; /* Text color for contrast */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 12px 20px; /* Padding for better click area */
+    font-size: 16px; /* Font size for readability */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for hover effect */
+}
+
+/* Hover Effect */
+.place-order .cart-total button:hover {
+    background-color: darkred; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Disabled State */
+.place-order .cart-total button:disabled {
+    background-color: #c5c5c5; /* Grey background for disabled state */
+    color: #747474; /* Grey text color */
+    cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* Payment Method Styles */
+.payment-method {
+    display: flex;
+    flex-direction: column; /* Stack radio buttons vertically */
+    margin-top: 20px; /* Space above payment method section */
+}
+
+.payment-method label {
+    margin-bottom: 10px; /* Space between labels */
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 5px; /* Space between radio and label */
+}
+
+/* Selected Radio Button Styles */
+.payment-method input[type="radio"]:checked + span {
+    font-weight: bold; /* Bold font for selected option */
+    color: tomato; /* Change color for the selected option */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: flex-start; /* Align to the start for better layout */
+        gap: 20px; /* Reduced gap for smaller screens */
+    }
+
+    .place-order-left,
+    .place-order-right {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .place-order-left .title {
+        font-size: 24px; /* Adjust title font size for smaller screens */
+        margin-bottom: 30px; /* Adjust margin for smaller screens */
+    }
+
+    .place-order-left input {
+        padding: 8px; /* Adjust padding for inputs on smaller screens */
+    }
+
+    .place-order .cart-total button {
+        width: 100%; /* Full width for buttons on smaller screens */
+        padding: 12px; /* Increased padding for better click area */
+        font-size: 16px; /* Larger text for better visibility */
+    }
+}
+
+@media (max-width: 480px) {
+    .place-order .cart-total button {
+        font-size: 14px; /* Further adjust button text size on very small screens */
+    }
+}

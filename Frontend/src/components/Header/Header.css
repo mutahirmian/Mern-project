@@ -1,0 +1,67 @@
+.header {
+    height: 34vw; /* Consider changing this to a more flexible unit, like vh */
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat center center; /* Center the background */
+    background-size: cover; /* Change to 'cover' for better responsiveness */
+    position: relative;
+    overflow: hidden; /* Prevent overflow if the image is larger */
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Changed to 'flex-start' for consistency */
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 2s;
+    color: white; /* Moved color to parent to reduce redundancy */
+}
+
+.header-contents h2 {
+    font-weight: 500;
+    font-size: max(4.5vw, 22px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow for better readability */
+}
+
+.header-contents p {
+    font-size: 1vw;
+    opacity: 0.8; /* Slightly reduced opacity for better layering */
+}
+
+.header-contents button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    transition: background-color 0.3s; /* Added transition for button hover */
+}
+
+.header-contents button:hover {
+    background-color: #e2e2e2; /* Light background on hover for feedback */
+}
+
+@media (max-width: 1050px) {
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none; /* Consider showing a condensed version instead */
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw; /* Ensure padding is still comfortable */
+    }
+}

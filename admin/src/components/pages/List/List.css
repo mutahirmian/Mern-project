@@ -1,0 +1,68 @@
+.list-table-format {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 15px; /* Increased gap for better separation */
+    padding: 15px 20px; /* Added more padding */
+    border: 1px solid #e0e0e0; /* Lighter border for a softer look */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 14px; /* Consistent font size */
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.list-table-format .title {
+    background-color: #007bff; /* Primary color for title row */
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold; /* Bold text for title */
+    padding: 10px 0; /* Vertical padding for title row */
+    border-radius: 8px; /* Rounded corners for title */
+}
+
+.list-table-format img {
+    width: 50px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded image corners */
+}
+
+.list-table-format:hover {
+    background-color: #f0f8ff; /* Light background on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.list-table-format > div {
+    padding: 12px 0; /* Vertical padding for each cell */
+    border-bottom: 1px solid #e0e0e0; /* Light border between rows */
+}
+
+.list-table-format > div:last-child {
+    border-bottom: none; /* Remove border for the last row */
+}
+
+@media (max-width: 800px) {
+    .list-table-format {
+        grid-template-columns: 1fr 3fr 1fr; /* Adjust columns for medium screens */
+        gap: 15px; /* Maintain gap */
+    }
+}
+
+@media (max-width: 600px) {
+    .list-table-format {
+        grid-template-columns: 1fr 2fr; /* Further adjust columns for smaller screens */
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+    .list-table-format.title {
+        display: none; /* Hide title row on small screens */
+    }
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Additional styling for interactive elements */
+.list-table-format > div:hover {
+    background-color: #e6f7ff; /* Highlight on hover for each row */
+    border-radius: 4px; /* Smooth corners on hover */
+}

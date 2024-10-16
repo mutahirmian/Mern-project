@@ -1,0 +1,95 @@
+.my-orders {
+    margin: 50px 0px;
+}
+
+.my-orders .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.my-orders-order {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #454545; /* Default text color */
+    border: 1px solid tomato;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.my-orders-order img {
+    width: 50px;
+}
+
+.my-orders-order p {
+    color: black; /* Change all paragraph text to black */
+}
+
+/* Change color for specific status indicators */
+.my-orders-order p span {
+    color: tomato; /* Keep this as is for the dot */
+}
+
+.my-orders-order p b {
+    font-weight: 500;
+    color: #454545; /* Order status text color */
+}
+
+.delete-order {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: red; /* Red color for visibility */
+    cursor: pointer; /* Pointer cursor for button */
+    margin-left: 10px; /* Space between order details and delete button */
+    font-size: 18px; /* Font size for the button */
+}
+
+.delete-order:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+
+/* Status color effects */
+.my-orders-order.food-delivered {
+    background-color: #d4edda; /* Light green */
+    border-color: #c3e6cb; /* Green border */
+}
+
+.my-orders-order.out-for-delivery {
+    background-color: #fff3cd; /* Light yellow */
+    border-color: #ffeeba; /* Yellow border */
+}
+
+.my-orders-order.food-processing {
+    background-color: #f8d7da; /* Light red */
+    border-color: #f5c6cb; /* Red border */
+}
+
+.my-orders-order .order-name {
+    color: black; /* Ensure the order name is black */
+}
+
+.my-orders-order button {
+    border: none;
+    padding: 12px 0px;
+    border-radius: 4px;
+    background-color: #ffe1e1;
+    cursor: pointer;
+    color: #454545;
+}
+
+@media (max-width: 900px) {
+    .my-orders-order {
+        grid-template-columns: 1fr 2fr 1fr;
+        row-gap: 5px;
+        font-size: 12px;
+    }
+
+    .my-orders-order button {
+        font-size: 10px;
+    }
+}

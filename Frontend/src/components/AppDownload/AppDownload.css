@@ -1,0 +1,41 @@
+.app-download {
+    margin: auto;
+    margin-top: 100px;
+    font-size: max(3vw, 20px);
+    text-align: center;
+    font-weight: 500;
+    color: #262626; /* Changed to a darker color for better visibility */
+}
+
+.app-download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: max(2vw, 10px);
+    margin-top: 40px;
+}
+
+.app-download-platforms img {
+    width: max(30vw, 120px);
+    max-width: 180px;
+    transition: transform 0.5s; /* Moved transition to transform for better performance */
+    cursor: pointer;
+    border-radius: 10px; /* Added rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+}
+
+.app-download-platforms img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover for effect */
+}
+
+/* Optional: Add a media query for mobile responsiveness */
+@media (max-width: 600px) {
+    .app-download {
+        font-size: 18px; /* Slightly reduce font size on smaller screens */
+    }
+
+    .app-download-platforms img {
+        width: 80px; /* Reduce image size on mobile */
+        max-width: 100px; /* Set a max width for smaller screens */
+    }
+}

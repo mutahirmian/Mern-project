@@ -1,0 +1,178 @@
+.cart {
+    margin-top: 100px;
+}
+
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: #555; /* Adjusted to a softer grey for better readability */
+    font-size: max(1vw, 12px);
+    font-weight: bold; /* Added bold weight for titles */
+    border-bottom: 2px solid #e2e2e2; /* Added a bottom border for separation */
+    padding-bottom: 10px; /* Added padding for better spacing */
+}
+
+.cart-items-item {
+    margin: 10px 0;
+    color: #333; /* Darker color for better contrast */
+    display: grid; /* Using grid for item layout */
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr; /* Match the title's layout */
+    align-items: center; /* Center items vertically */
+}
+
+.cart-items-item img {
+    width: 60px;
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+.cart hr {
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
+    margin: 15px 0; /* Added margin for better spacing */
+}
+
+.cart-items-item .cross {
+    cursor: pointer;
+    color: tomato; /* Changed color to indicate clickable action */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.cart-items-item .cross:hover {
+    color: darkred; /* Darker shade on hover for visibility */
+}
+
+.cart-bottom {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.cart-total {
+    flex: 0 1 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px; /* Added padding for better spacing */
+    border: 1px solid #e2e2e2; /* Border for separation */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #555;
+    padding: 5px 0;
+}
+
+.cart-bottom-details p,
+.cart-bottom-details b {
+    flex: 1;
+    margin: 0;
+    text-align: left;
+    display: inline-block; /* Ensures both p and b behave consistently */
+}
+
+.cart-bottom-details p:last-child,
+.cart-bottom-details b:last-child {
+    text-align: right; /* Aligns the numbers to the right */
+    flex-shrink: 0; /* Prevents the numbers from shrinking */
+    min-width: 100px; /* Ensures there's enough space for the numbers */
+    display: inline-block; /* Makes sure b behaves like p in terms of alignment */
+}
+
+.cart-total hr {
+    margin: 10px 0;
+}
+
+.cart-total button {
+    border: none;
+    color: white;
+    background-color: tomato;
+    width: max(15vw, 200px);
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for button */
+}
+
+.cart-total button:hover {
+    background-color: darkred; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.cart-promocode {
+    flex: 0 1 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.cart-promocode p {
+    color: #555;
+}
+
+.cart-promocode-input {
+    margin-top: 10px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 4px;
+    border: 1px solid #ccc; /* Border for input area */
+}
+
+.cart-promocode-input input::placeholder {
+    color: #aaa; /* Placeholder text color for better visibility */
+}
+
+.cart-promocode-input input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    height: 46px;
+    flex: 1; /* Make input take available space */
+}
+
+.cart-promocode-input button {
+    width: max(8vw, 100px);
+    padding: 12px 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for button */
+}
+
+.cart-promocode-input button:hover {
+    background-color: #333; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+@media(max-width: 750px) {
+    .cart-bottom {
+        flex-direction: column-reverse;
+    }
+    
+    .cart-promocode {
+        justify-content: start;
+    }
+
+    .cart-total,
+    .cart-promocode {
+        flex: 1 1 100%; /* Allow full width on small screens */
+    }
+}

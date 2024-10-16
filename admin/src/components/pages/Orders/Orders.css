@@ -1,0 +1,94 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 1px solid rgba(255, 99, 71, 0.5); /* Softer tomato border */
+    padding: 20px;
+    margin: 30px 0px;
+    font-size: 14px;
+    color: #505050;
+    border-radius: 8px; /* Rounded corners for modern look */
+    background-color: #fafafa; /* Light background for better readability */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a soft shadow */
+}
+
+.order-item:hover {
+    transform: translateY(-5px); /* Elevates the item on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+/* Delivered orders will turn green */
+.order-item.delivered {
+    background-color: #e0ffe0; /* Light green background */
+    border-color: green;
+    color: #006600; /* Dark green text color */
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.3); /* Slight glow effect for delivered */
+}
+
+.order-item-food, .order-item-name {
+    font-weight: 600;
+    color: #333; /* Slightly darker for emphasis */
+}
+
+.order-item-name {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-size: 16px; /* Increase size for visibility */
+}
+
+.order-item-address {
+    margin-bottom: 10px;
+    font-style: italic; /* Add a subtle italic style */
+}
+.order-item-date {
+    font-size: 12px;
+    color: #666; /* Light gray color for the date */
+    margin-top: 5px; /* Add some space above the date */
+  }
+  
+/* Adjusting select style for delivered status */
+.order-item.delivered select {
+    background-color: #d1f7d1;
+    border: 1px solid green;
+    color: #006600; /* Match the text color */
+    padding: 5px 10px;
+    border-radius: 4px; /* Rounded select */
+    transition: background-color 0.2s ease;
+}
+
+.order-item select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); /* Highlighted outline on focus */
+}
+.delivered {
+    background-color: #d4edda; /* Light green for delivered */
+}
+
+.out-for-delivery {
+    background-color: #fff3cd; /* Light yellow for out for delivery */
+}
+
+.food-processing {
+    background-color: #f8d7da; /* Light red for food processing */
+}
+
+
+@media (max-width: 1000px) {
+    .order-item {
+        font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 8px;
+        gap: 20px;
+    }
+    
+    .order-item select {
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    .order-item img {
+        width: 40px;
+    }
+}

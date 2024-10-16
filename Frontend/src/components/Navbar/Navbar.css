@@ -1,0 +1,149 @@
+.navbar {
+    padding: 20px 10px; /* Adjusted horizontal padding for smaller screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.navbar .logo {
+    width: 150px; /* Logo width */
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+    flex-grow: 1; /* Allow the menu to take available space */
+    justify-content: center; /* Center menu items */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjusted gap for smaller screens */
+    cursor: pointer;
+}
+
+.navbar button {
+    background: transparent; /* Corrected spelling from 'tranparent' */
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato; /* Corrected spelling from 'tommato' */
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+    color: tomato;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 140px; /* Adjust logo width for smaller screens */
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-right img {
+        width: 20px;
+    }
+
+    .navbar-right button {
+        padding: 7px 20px; /* Adjusted button padding */
+        font-size: 15px; /* Adjusted button font size */
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none; /* Hides menu on smaller screens */
+    }
+
+    .navbar-right {
+        flex: 1; /* Allow navbar-right to take available space */
+        justify-content: space-between; /* Space between elements */
+    }
+
+    .navbar-right button {
+        padding: 10px; /* Adjusted padding for buttons */
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .navbar-profile {
+        flex-grow: 1; /* Allow profile section to take available space */
+    }
+}

@@ -1,0 +1,89 @@
+.food-display {
+    margin-top: 40px;
+    padding: 20px; /* Added padding for better spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.food-display h2 {
+    font-size: max(2.5vw, 28px); /* Increased font size for better readability */
+    font-weight: 600;
+    color: #333; /* Darker color for better visibility */
+    text-align: center; /* Centered title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive grid */
+    margin-top: 20px; /* Reduced margin for compactness */
+    gap: 20px; /* Adjusted gap for a more balanced look */
+    row-gap: 30px; /* More vertical spacing for items */
+}
+
+.food-display-list-item {
+    background-color: white; /* White background for items */
+    border-radius: 8px; /* Rounded corners for items */
+    padding: 15px; /* Inner padding for better content spacing */
+    text-align: center; /* Centered text for uniformity */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for item depth */
+}
+
+.food-display-list-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    background-color: #f0f0f0; /* Light background color change on hover */
+}
+
+.food-display-list-item img {
+    width: 100%; /* Full width images for uniformity */
+    border-radius: 6px; /* Slightly rounded image corners */
+    object-fit: cover; /* Cover images for better presentation */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.food-display-list-item img:hover {
+    transform: scale(1.05); /* Slightly zoom in image on hover */
+}
+
+.food-display-list-item p {
+    margin-top: 10px;
+    color: #555; /* Softer color for text */
+    font-size: max(1.2vw, 14px); /* Adjusted font size for readability */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+    .food-display h2 {
+        font-size: 20px; /* Adjusted font size for smaller screens */
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust grid items for smaller screens */
+        gap: 15px; /* Reduced gap for smaller screens */
+    }
+
+    .food-display-list-item {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .food-display-list-item p {
+        font-size: 12px; /* Adjust text size for better readability on small screens */
+    }
+
+    .food-display-list-item img:hover {
+        transform: scale(1); /* Disable zoom effect on small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .food-display h2 {
+        font-size: 18px; /* Further adjust title size */
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(1, 1fr); /* Stack items vertically on very small screens */
+    }
+}
