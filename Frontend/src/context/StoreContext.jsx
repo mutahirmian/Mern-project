@@ -7,7 +7,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [promoCode, setPromoCode] = useState(""); // State for promo code
     const [promoUsed, setPromoUsed] = useState(false); // State to track if promo code has been used
-    const url = "http://https://food-deliveryapp-backend.netlify.app";
+    const url = "https://backend-production-706f.up.railway.app";
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([]);
 
