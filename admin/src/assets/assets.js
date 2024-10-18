@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'http://food-deliveryapp-backend.netlify.app'
+export const url = 'https://backend-production-706f.up.railway.app'
