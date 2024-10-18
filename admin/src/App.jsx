@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  const url = "https://food-deliveryapp-backend.netlify.app/"
+  const url = "https://backend-production-706f.up.railway.app"
 
   return (
     <div>
